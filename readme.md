@@ -16,7 +16,7 @@ Create file named runRose.php
 <?php
 
 $rose = new \Com\Netroby\Rose();
-$rose->setGenerator(new \Com\Netroby\Rose\Generator\MySQL[
+$rose->setGenerator(new \Com\Netroby\Rose\Generator\MySQL([
     [
         'database_name' => 'test',
         'data' => [
@@ -40,7 +40,7 @@ $rose->setGenerator(new \Com\Netroby\Rose\Generator\MySQL[
             ],
         ]
     ]
-])->writeTo(new \Com\Netroby\Rose\Writter\MySQL([
+]))->writeTo(new \Com\Netroby\Rose\Writter\MySQL([
     'host' => '127.0.0.1',
     'port' => '3306',
     'user' => 'root',
